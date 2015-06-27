@@ -1,0 +1,33 @@
+{
+  "name": "resume",
+  "version": "0.0.1",
+  "description": "a sample resume",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "edp": {
+    "wwwroot": "/",
+    "depDir": "dep",
+    "srcDir": "src",
+    "loaderAutoConfig": "js,htm,html,tpl,vm,phtml",
+    "loaderUrl": "http://s1.bdstatic.com/r/www/cache/ecom/esl/1-8-2/esl.js",
+    "dependencies": {}
+  },
+  "dependencies": {
+    "autoprefixer": "^5.2.0",
+    "autoprefixer-core": "^5.2.1",
+    "css-mqpacker": "^3.1.0",
+    "gulp-less": "^3.0.3",
+    "gulp-postcss": "^5.1.9",
+    "rider": "^2.0.0",
+    "stylus": "^0.51.1"
+  },
+  "author": "meshenli@gmail.com",
+  "repository": "empty",
+  "license": "BSD",
+  "readme": "README",
+  "devDependencies": {
+    "gulp-stylus": "^2.0.5"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "resume",
+  "version": "0.0.1",
+  "homepage": "https://github.com/ishenli/notebook",
+  "authors": [
+    "shenli <meshenli@gmail.com>"
+  ],
+  "keywords": [
+    "resume"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "dep",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "shake.js": "~1.2.1"
+  }
+}
