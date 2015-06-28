@@ -255,14 +255,9 @@ i.pro {
   width: 91.66666666666666%;
   padding: 15px 15px 0 0;
   text-align: right;
+  font-size: 0;
 }
 .top-bar >.item {
-  margin-right: 20px;
-}
-.top-bar >.item:last-child {
-  margin-right: 0;
-}
-.top-bar .email {
   display: inline-block;
   margin-bottom: 0;
   font-weight: 400;
@@ -280,32 +275,13 @@ i.pro {
       -ms-user-select: none;
           user-select: none;
   text-decoration: none;
-  transition: all 0.3s ease-in-out;
   background-color: #031634;
   color: #fff;
   border-color: #031634;
+  margin-right: 10px;
 }
-.top-bar .music {
-  display: inline-block;
-  margin-bottom: 0;
-  font-weight: 400;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  padding: 6px 12px;
-  font-size: 14px;
-  border-radius: 4px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  text-decoration: none;
-  background-color: #3498db;
-  color: #fff;
-  border-color: #3498db;
+.top-bar >.item:last-child {
+  margin-right: 0;
 }
 .profile-intro {
   margin-top: 50px;
@@ -566,6 +542,14 @@ footer a {
     width: 1170px;
   }
 }
+@media (max-width: 1050px) {
+  .top-bar {
+    width: 100%;
+  }
+  .qcode {
+    display: none;
+  }
+}
 @media (min-width: 992px) {
   .profile-intro .profile-aside {
     float: left;
@@ -582,10 +566,5 @@ footer a {
   .baseinfo .line {
     float: left;
     width: 50%;
-  }
-}
-@media (max-width: 1050px) {
-  .qcode {
-    display: none;
   }
 }
