@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>个人简历</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit"/>
+    <meta name="author" content="shenli">
     <link rel="stylesheet" href="./main.css"/>
 </head>
 <body>
@@ -11,7 +13,7 @@
     <main class="intro">
         <header class="top-bar">
             <button id="music-toggle" class="music item hidden">关闭声音</button>
-            <a href="https://github.com/ishenli/notebook/tree/gh-pages" class="email item">查看源码</a>
+            <a target="_blank" href="https://github.com/ishenli/notebook/tree/gh-pages" class="email item">查看源码</a>
             <a href="mailto:http://mesheli@gmail.com" class="email item">发送邮件</a>
         </header>
         <article class="profile-intro">
@@ -89,7 +91,7 @@
                         <h3 class="section-item-title">糯米</h3>
                         <h4 class="sub-title"><i class="iconfont iconfont-work"></i>前端工程师- <em>百度糯米事业部（2015）</em></h4>
                         <p class="section-item-desc">负责百度糯米前端开发，包含移动端（<a href="http://m.nuomi.com">http://m.nuomi.com</a>)
-                            和糯米PC端（<a href="http://www.nuomi.com">http://www.nuomi.com</a>的开发，两者系统采用FIS开发，是业内的第三大团购网站。糯米移动端在6月初初步进行了去FIS的架构改造，采用<strong class="highlight">gulp+amd+webpack</strong>作为项目
+                            和糯米PC端（<a href="http://www.nuomi.com">http://www.nuomi.com</a>，两者系统采用FIS开发，是业内的第三大团购网站。糯米移动端在6月初初步进行了去FIS的架构改造，采用<strong class="highlight">gulp+amd+webpack</strong>作为项目
                         技术栈，提升开发效率。</p>
                     </li>
                 </ul>
@@ -191,17 +193,16 @@
                 defaultMusic: 'yao'
             };
 
-            exports.toggleAvatar = function() {
-                avatar.classList.toggle('hover');
-                avatar.getBoundingClientRect();
-            };
-
-
             var playMusic = function (type) {
                 type = type || config.defaultMusic;
                 if (config.music) {
                     document.getElementById(type).play();
                 }
+            };
+
+            exports.toggleAvatar = function() {
+                avatar.classList.toggle('hover');
+                avatar.getBoundingClientRect();
             };
 
             exports.initAvatarToggle = function () {
@@ -220,7 +221,6 @@
 
                 shakeIns.start();
 
-
                 window.addEventListener('shake', shakeFun, false);
 
                 function shakeFun () {
@@ -238,7 +238,6 @@
                          config.music = !old;
                          playMusic();
                          this.innerHTML = config.music ? '关闭声音' : '开启声音';
-
                      });
                  }
             };
